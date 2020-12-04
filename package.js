@@ -1,11 +1,12 @@
 Package.describe({
     name: "tchiers:batch-initial",
-    summary: "Allow initial document adds from publish functions to be sent as a batch instead of one-at-a-time. Greatly improves client load times for large sets of small documents.",
+    summary: "Allow initial document adds from publish functions to be sent as a batch instead of one-at-a-time",
     version: '1.0.0',
-    documentation: 'https://github.com/tchiers/meteor-batch-initial/blob/master/README.md'
+    git: 'https://github.com/tchiers/meteor-batch-initial.git'
 });
 
 Package.onUse(function (api) {
+    api.versionsFrom("1.8");
     api.use('ddp'); // must load after DDP has init'ed
     api.use('ddp-common'); // must load after DDP has init'ed
     api.use('peerlibrary:extend-publish@0.6.0');
@@ -16,6 +17,7 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
+    api.versionsFrom("1.8");
     api.use('ddp'); // must load after DDP has init'ed
     api.use('ddp-common'); // must load after DDP has init'ed
     api.use('peerlibrary:extend-publish@0.6.0');
