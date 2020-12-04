@@ -1,9 +1,9 @@
 # batch-initial
 ***
-##Installation
+## Installation
 `meteor add tchiers:batch-initial`
 
-##Use
+## Use
 This package makes available
 
 `this.batchInitial()`
